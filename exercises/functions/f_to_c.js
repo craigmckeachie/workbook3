@@ -1,8 +1,8 @@
 function convertFtoC(fahrenheitTempature) {
-  let celsiusTemperature = (fahrenheitTempature - 32) * (5 / 9);
+  const celsiusTemperature = (fahrenheitTempature - 32) * (5 / 9);
   return celsiusTemperature;
 }
 
-let currentTemp = 92;
-let celsiusTemp = convertFtoC(currentTemp);
+const currentTemp = 92;
+const celsiusTemp = convertFtoC(currentTemp);
 console.log(celsiusTemp.toFixed(2));
