@@ -13,6 +13,7 @@ let myState = "OH";
 let myZip = "44805";
 
 displayMailingAddress(myName, myStreetAddress, myCity, myState, myZip);
+displayMailingAddress("David DeFalco", "143 Timer Oak Drive", "Powell", "PA", "43289")
 
 function addNumbers(num1, num2) {
   let result = num1 + num2;
