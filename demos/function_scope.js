@@ -1,3 +1,5 @@
+"use strict";
+
 function increment() {
   let count = 0;
   count = count + 1;
