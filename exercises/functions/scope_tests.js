@@ -7,7 +7,6 @@ function test5() {
     let a = 8; //local a
     console.log("a = " + a); //local
   }
-
   again();
   console.log("a = " + a); //global a
 }
