@@ -13,10 +13,15 @@
     <button onclick="handleClick();">Display</button>
     <script>
         function handleClick() {
-            const selectedDateString = document.getElementById("selected-date").value + 'T00:00';
-            console.log(selectedDateString);
-            const selectedDate = new Date(selectedDateString);
-            console.log(selectedDate.toString());
+            const selectedDateString = document.getElementById("selected-date").value
+            console.log(`selectedDateString is ${selectedDateString.toString()}`);
+            const selectedDateWithCurrentTime = new Date(selectedDateString);
+            console.log(`selectedDateWithCurrentTime is ${selectedDateWithCurrentTime}  `);
+            console.log("");
+            const selectedDateStringAtMidnight = selectedDateString + 'T00:00';
+            console.log(`selectedDateStringAtMidnight is ${selectedDateStringAtMidnight}`);
+            const selectedDateAtMidnight = new Date(selectedDateStringAtMidnight);
+            console.log(`selectedDateAtMidnight is ${selectedDateAtMidnight.toString()}`);
         }
 
 
