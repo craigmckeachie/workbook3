@@ -36,12 +36,15 @@
 class Date1 {
   year;
   month;
-  day;  
+  day; 
+
   constructor(year, month, day) {
     this.year = year;
     this.month = month;
     this.day = day;
+
   }
+
   getFullYear() {
     return this.year;
   }
@@ -49,7 +52,7 @@ class Date1 {
     this.year = year;
   }
   toLocaleString(){
-    
+
   }
   toString() {
     return `${this.day}/${this.month}/${this.year}`;
@@ -79,25 +82,28 @@ class PersonFormatter{
 class Person{
     first;
     last;
+    age;
     constructor(first, last){
         this.first = first;
         this.last = last;
+        this.age = 0
     }
+    
     getFullName(){
 
         return `${this.first} ${this.last} `
     }
     toString(){
-        return `${this.last}, ${this.first}   `
+        return `${this.last}, ${this.first} you are ${this.age} years old.   `
     }
 }
 
 let person = new Person("Jon","Tran");
 let person1 = new Person("Amir","Branch");
 // let person = Person.constructor("Jon","Tran")
-console.log(person.first);
-console.log(person1.first);
+// console.log(person.first);
+// console.log(person1.first);
 
-
-// console.log(person.toString());
-console.log(person.getFullName());
+person.age = 25;
+console.log(person.toString());
+// console.log(person.getFullName());
