@@ -29,6 +29,13 @@
             document.getElementById("messageParagraph").innerText = selectedDateWithCurrentTime.toDateString();
         }
 
+        function handleClick1() {
+            const dateAsString = document.getElementById("selected-date").value + 'T00:00';
+            document.getElementById("messageParagraph").innerText = new Date(dateAsString).toDateString();
+        }
+
+
+
 
 
 
