@@ -11,17 +11,22 @@
 <body>
     <input type="date" name="selectedDate" class="primary" id="selected-date">
     <button onclick="handleClick();">Display</button>
+    <p id="messageParagraph"></p>
     <script>
         function handleClick() {
-            const selectedDateString = document.getElementById("selected-date").value
-            console.log(`selectedDateString is ${selectedDateString.toString()}`);
+            const selectedDateString = document.getElementById("selected-date").value;
+            console.log(`selectedDateString is ${selectedDateString}`);
             const selectedDateWithCurrentTime = new Date(selectedDateString);
-            console.log(`selectedDateWithCurrentTime is ${selectedDateWithCurrentTime}  `);
+            console.log(`selectedDateWithCurrentTime is ${selectedDateWithCurrentTime.toString()}  `);
+
             console.log("");
+
             const selectedDateStringAtMidnight = selectedDateString + 'T00:00';
             console.log(`selectedDateStringAtMidnight is ${selectedDateStringAtMidnight}`);
             const selectedDateAtMidnight = new Date(selectedDateStringAtMidnight);
             console.log(`selectedDateAtMidnight is ${selectedDateAtMidnight.toString()}`);
+
+            document.getElementById("messageParagraph").innerText = selectedDateWithCurrentTime.toDateString();
         }
 
 
