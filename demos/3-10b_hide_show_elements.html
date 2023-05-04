@@ -11,8 +11,7 @@
 
 <body>
     <main>
-        <input type="checkbox" name="toggleDetailsCheckbox" id="toggleDetailsCheckbox" onclick="hideOrShowDetails();">
-        <label for="showCheckbox">Show Details</label>
+        <label for="showCheckbox" onclick="hideOrShowDetails();">Show Details</label>
         <hr>
         <section id="detailsSection" style="display:none;">
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos repellendus minus perferendis maxime?
@@ -26,10 +25,11 @@
         </section>
     </main>
     <script>
+        let showDetails = false;
         function hideOrShowDetails() {
             const detailsSection = document.getElementById("detailsSection");
-            const toggleDetailsCheckbox = document.getElementById("toggleDetailsCheckbox");
-            toggleElement(detailsSection, toggleDetailsCheckbox.checked);
+            showDetails = !showDetails;
+            toggleElement(detailsSection, showDetails);
         }
 
         function toggleElement(htmlElement, show) {
