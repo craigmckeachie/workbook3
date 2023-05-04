@@ -11,10 +11,10 @@
 
 <body>
     <main class="container">
-        <input type="checkbox" name="showCheckbox" id="showCheckbox">
+        <input type="checkbox" name="showCheckbox" id="showCheckbox" onclick="hideOrShowDetails();">
         <label for="showCheckbox">Show Details</label>
         <hr>
-        <section id="detailsSection">
+        <section id="detailsSection" style="display:none;">
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos repellendus minus perferendis maxime?
                 Adipisci ipsam tempora fugiat consectetur ipsum itaque. Ab, maiores? Eos, quibusdam minima. Id illo esse
                 accusamus temporibus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed, sunt ea. Soluta,
@@ -25,6 +25,12 @@
                 repellat eaque animi.</p>
         </section>
     </main>
+    <script>
+        function hideOrShowDetails() {
+            const detailsSection = document.getElementById("detailsSection");
+            detailsSection.style.display = "block";
+        }
+    </script>
 
 </body>
 
