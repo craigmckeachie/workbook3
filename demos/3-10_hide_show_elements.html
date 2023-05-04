@@ -11,7 +11,7 @@
 
 <body>
     <main class="container">
-        <input type="checkbox" name="showCheckbox" id="showCheckbox" onclick="hideOrShowDetails();">
+        <input type="checkbox" name="toggleDetailsCheckbox" id="toggleDetailsCheckbox" onclick="hideOrShowDetails();">
         <label for="showCheckbox">Show Details</label>
         <hr>
         <section id="detailsSection" style="display:none;">
@@ -28,7 +28,12 @@
     <script>
         function hideOrShowDetails() {
             const detailsSection = document.getElementById("detailsSection");
-            detailsSection.style.display = "block";
+            const toggleDetailsCheckbox = document.getElementById("toggleDetailsCheckbox");
+            if (toggleDetailsCheckbox.checked) {
+                detailsSection.style.display = "block";
+            } else {
+                detailsSection.style.display = "none";
+            }
         }
     </script>
 
