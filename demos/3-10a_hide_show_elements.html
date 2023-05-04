@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hide and Show Elements</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.classless.min.css" />
+</head>
+
+<body>
+    <main>
+        <input type="checkbox" name="toggleDetailsCheckbox" id="toggleDetailsCheckbox" onclick="hideOrShowDetails();">
+        <label for="showCheckbox">Show Details</label>
+        <hr>
+        <section id="detailsSection" style="display:none;">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos repellendus minus perferendis maxime?
+                Adipisci ipsam tempora fugiat consectetur ipsum itaque. Ab, maiores? Eos, quibusdam minima. Id illo esse
+                accusamus temporibus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed, sunt ea. Soluta,
+                praesentium harum dolorem optio eligendi consequuntur facilis dolor voluptatem, architecto nam fugiat
+                esse ipsam? Amet dolorum facere temporibus.</p>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rem quae accusamus architecto qui assumenda
+                nostrum labore consectetur? Quis expedita possimus neque corrupti cum? Dolorum expedita corrupti beatae
+                repellat eaque animi.</p>
+        </section>
+    </main>
+    <script>
+        function hideOrShowDetails() {
+            const detailsSection = document.getElementById("detailsSection");
+            const toggleDetailsCheckbox = document.getElementById("toggleDetailsCheckbox");
+            toggleElement(detailsSection, toggleDetailsCheckbox.checked);
+
+        }
+
+        function toggleElement(htmlElement, show) {
+            if (show) {
+                htmlElement.style.display = "block";
+            } else {
+                htmlElement.style.display = "none";
+            }
+        }
+    </script>
+
+</body>
+
+</html>
