@@ -14,12 +14,12 @@
         <fieldset>
             <legend>Rental Car Options:</legend>
 
-            <input type="checkbox" id="tollTag" name="tollTag" value="tolltag" checked>
+            <input type="checkbox" id="tollTag" name="tollTag" value="tolltag">
             <label for="tollTag">Electronic Toll Tag ($3.95/day
                 plus tolls)</label>
             <br>
 
-            <input type="checkbox" id="gps" name="gps" value="gls">
+            <input type="checkbox" id="gps" name="gps" value="gls" checked>
             <label for="gps"> GPS ($4.95/day)</label>
             <br>
 
@@ -36,16 +36,16 @@
 
         function calculateExtraCost() {
             let extraPerDay = 0;
-            let tollTag = document.getElementById("tollTag").checked;
-            if (tollTag == true) {
+
+            if (document.getElementById("tollTag").checked) {
                 extraPerDay += 3.95;
             }
-            let gps = document.getElementById("gps").checked;
-            if (gps == true) {
+
+            if (document.getElementById("gps").checked) {
                 extraPerDay += 4.95;
             }
-            let roadside = document.getElementById("roadside").checked;
-            if (roadside == true) {
+
+            if (document.getElementById("roadside").checked) {
                 extraPerDay += 2.95;
             }
             document.getElementById("resultParagraph").innerText = "$" + extraPerDay.toFixed(2);
