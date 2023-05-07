@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Using Utility Functions</title>
+
+</head>
+
+<body>
+    <h1>Using Utility Functions</h1>
+    <button id="greetButton">Greet</button>
+    <script>
+        const $q = function (selector) {
+            return document.querySelector(selector);
+        }
+
+        Node.prototype.on = function (type, listener) {
+            return this.addEventListener(type, listener);
+        }
+
+        // Document.prototype.on = function (type, listener) {
+        //     return this.addEventListener(type, listener);
+        // }
+
+        // HTMLElement.prototype.on = function (type, listener) {
+        //     return this.addEventListener(type, listener);
+        // }
+
+        document.on("DOMContentLoaded", function () {
+            let button = $q("#greetButton");
+            button.on("click", sayHello)
+        })
+
+        function sayHello() {
+            alert("Hello!");
+        }
+    </script>
+</body>
+
+</html>
